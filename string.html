@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //替换字符
+    var str="abef139"; //[a,b,'e']
+    function myfunction(i,para){
+        var temp,result;
+        temp=str.split("");//将字符串分割成数组
+        temp[i] = para;
+        result = temp.join('');//将数组组合成字符串
+        str = result;
+    }
+    myfunction(5,'232');
+    console.log(str);
+
+
+    var str="abef139"; //[a,b,'e']
+    function myfunction(i,para){
+        var temp,result;
+        temp=str.split("");
+        temp[i]=para;
+        result=temp.join('');
+        return result;
+    }
+    console.log(myfunction(2,'4456'));
+    //替换字符结束
+
+
+    var exm='12ddfhg'
+    console.log(exm.charAt(2));//获取第二位的字符串
+    console.log(exm.charCodeAt(2));//获取第二位的字符串的编码
+    console.log(exm.indexOf('d'));//返回的是第一次出现的位置  无结果返回-1
+    console.log(exm.indexOf('d',2));//indexof中的第一个字符为要查找的字符，第二个为起始位置。无则默认从第一位开始查找
+    console.log(exm.lastIndexOf('d'));//返回d最后出现的位置,从后往前搜索
+    console.log(exm.search('f'));//寻找指定的字符串，返回第一个匹配字符的位置，无则返回-1，
+    console.log(exm.match(1));
+    console.log(exm.substring(2,5));//截取字符串，有起始位置和结束位置,若end省略，则到最后一位。
+    console.log(exm.slice(2,5));//参数可为负，-1代表最后一位,截取。
+    console.log(exm.substr(start,length));//截取字符串，长度省略则默认到最后一位
+    replace('被替换字符','替换字符');
+    split(分割符);//将字符串转换成数组
+    toLowerCase();
+    toUpperCase();
+
+
+
+    //判断字符串的长度
+    function myfunction(para){
+        var temp;
+        temp=para;
+        if (temp.length<=5)
+        {
+            print('长度小于5==='+temp.length);
+        }
+        else if (temp.length>5&&temp.length<=10)
+        {
+            print('长度小于10==='+temp.length);
+        }
+        else if (temp.length>10&&temp.length<=50)
+        {
+            print('长度小于50==='+temp.length);
+        }
+        else {
+            print('***')
+        }
+    }
+    function print(msg){
+        console.log(msg);
+    }
+    myfunction('dafadfasfdsadfw3r23');
+    //判断字符串的长度结束
+
+
+    //合并数组中的各项
+    var exm=['a','b','你好','c','a','ddd']
+    function sumstring(para){
+        var temp;
+        temp=para.join("");
+        return temp;
+    }
+    console.log(sumstring(exm));
+
+
+    var exm=['a','b','你好','c','a','ddd']
+    function sumStr(arr){
+        var str = '' ;
+        for(var i=0;i<arr.length;i++){
+            str+=arr[i];
+        }
+        return str;
+    }
+    console.log(sumStr(exm));
+
+
+
+    function sumstring(para){
+        var temp;
+        temp=para.join("");
+        exm=temp;
+    }
+    console.log(exm);
+    //合并数组中的各项结束
+</script>
+</body>
+</html>
